@@ -9,6 +9,17 @@ require_once($template_diretorio . '/endpoints/usuario_get.php');
 require_once($template_diretorio . '/endpoints/usuario_put.php');
 
 require_once($template_diretorio . '/endpoints/produto_post.php');
+require_once($template_diretorio . '/endpoints/produto_get.php');
+
+function getProdutoIdBySlug($slug) {
+    $query = new WP_Query(array(
+        'name' => $slug,
+        'post_type' => 'produto',
+        'numberposts' => 1,
+        'fields' => 'ids'
+    ));
+    return $query;
+}
 
 function expire_token() {
     return time() + (60+60+24);
