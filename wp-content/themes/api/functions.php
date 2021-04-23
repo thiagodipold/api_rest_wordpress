@@ -18,7 +18,10 @@ function getProdutoIdBySlug($slug) {
         'numberposts' => 1,
         'fields' => 'ids'
     ));
-    return $query;
+
+    $posts = $query->get_posts();
+
+    return array_shift($posts); //retorna o ID do post pesquisado
 }
 
 function expire_token() {

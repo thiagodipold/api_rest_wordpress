@@ -36,9 +36,9 @@ function api_produto_post($request){
             require_once(ABSPATH . 'wp-admin/includes/file.php');
             require_once(ABSPATH . 'wp-admin/includes/media.php');
 
-            foreach($files as $file => $array);
-            media_handle_upload($file, $produto_id); //subo a imagem e a qual produto está relacionado
-            
+            foreach($files as $file => $array){
+                media_handle_upload($file, $produto_id); //subo a imagem e a qual produto está relacionado
+            }
         }
     } else {
         $response = new WP_Error('permissao', 'Usuário não possui permissão.', array('status' => 403));
