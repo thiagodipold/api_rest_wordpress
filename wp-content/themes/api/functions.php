@@ -10,6 +10,7 @@ require_once($template_diretorio . '/endpoints/usuario_put.php');
 
 require_once($template_diretorio . '/endpoints/produto_post.php');
 require_once($template_diretorio . '/endpoints/produto_get.php');
+require_once($template_diretorio . '/endpoints/produto_delete.php');
 
 function getProdutoIdBySlug($slug) {
     $query = new WP_Query(array(
