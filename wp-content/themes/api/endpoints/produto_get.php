@@ -25,7 +25,7 @@ function produto_schema($slug) {
             "id" => $slug,
             "fotos" => $images_array,
             "nome" => $post_meta['nome'][0],
-            "preco" => $post_meta['descricao'][0],
+            "preco" => $post_meta['preco'][0],
             "descricao" => $post_meta['descricao'][0],
             "vendido" => $post_meta['vendido'][0],
             "usuario_id" => $post_meta['usuario_id'][0]
